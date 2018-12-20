@@ -1,0 +1,14 @@
+<%= link_to "Create a new Heroine", new_heroine_path %><br><br>
+<ul>
+  <% @heroines.each do |heroine| %>
+    <li>
+      <%= link_to heroine.super_name, heroine %>
+    </li>
+    <br>
+  <% end %>
+</ul>
+<h3>Filter Heroines By Super Power:</h3>
+<% @powers.each do |power| %>
+<%= link_to power.name, power_filter_path(power) %><br>
+<% end %>
+<br><br>
